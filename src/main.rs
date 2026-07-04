@@ -24,6 +24,7 @@ struct Config {
 }
 
 impl Config {
+    // Returning a Result from Config::build
     fn build(args: &[String]) -> Result<Config, &'static str> {
         if args.len() < 3 {
             return Err("not enough arguments");
