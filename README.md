@@ -27,3 +27,5 @@ The responsibilities that remain in the main function after this process should 
   - Setting up any other configuration
   - Calling a `run` function in lib.rs
   - Handling the error if `run` returns an error
+
+This pattern is about separating concerns: **main.rs** handles running the program and **lib.rs** handles all the logic of the task at hand. Because you can’t test the `main` function directly, this structure lets you test all of your program’s logic by moving it out of the `main` function. The code that remains in the `main` function will be small enough to verify its correctness by reading it. Let’s rework our program by following this process.
