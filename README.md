@@ -1,5 +1,6 @@
 # rusty-grep
-this project will needed background knowledge to understand a real-world project such as `ripgrep`
+this project will needed background knowledge to understand a real-world project such as `ripgrep`.
+
 Along the way:
   - we’ll show how to make our command line tool use the terminal features that many other command line tools use.
   - We’ll read the value of an environment variable to allow the user to configure the behavior of our tool. 
