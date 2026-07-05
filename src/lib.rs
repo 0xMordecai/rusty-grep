@@ -20,7 +20,7 @@ mod tests {
 
     #[test]
     fn case_sensitive() {
-        let query = "duct";
+        let query = "rUsT";
         let contents = "\
         Rust:
         safe, fast, productive.
