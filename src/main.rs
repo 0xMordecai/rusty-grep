@@ -25,8 +25,9 @@ fn run(config: Config) -> Result<(), Box<dyn Error>> {
 }
 
 struct Config {
-    query: String,
-    file_path: String,
+    pub query: String,
+    pub file_path: String,
+    pub ignore_case: bool,
 }
 
 impl Config {
