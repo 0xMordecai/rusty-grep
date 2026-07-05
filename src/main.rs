@@ -24,7 +24,7 @@ fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-struct Config {
+pub struct Config {
     pub query: String,
     pub file_path: String,
     pub ignore_case: bool,
