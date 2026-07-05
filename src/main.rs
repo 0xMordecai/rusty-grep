@@ -1,4 +1,4 @@
-use rusty_grep::search;
+use rusty_grep::{search, search_case_insensitive};
 use std::{env, error::Error, fs, process};
 fn main() {
     // allows your minigrep program to read any command line arguments passed to it and then collect the values into a vector.
@@ -18,7 +18,12 @@ fn main() {
 fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
 
-    for line in search(&config.query, &contents) {
+    let results = if config.ignore_case {
+        search_case_insensitive(&config.query, &contents)
+    } else {
+        search(&config.query, &contents)
+    };
+    for line in results {
         println!("{line}");
     }
     Ok(())
